@@ -1,12 +1,14 @@
 function quickSort(arr) {
-
+    if(arr.lenght < 2) {
+        return arr;
+    }
     var left = [];
     var right = [];
 
     // pivot key = 0
     var pivot = arr.shift();
 
-    for(i = 0; i < arr.length; i++) {
+    for(var i = 0; i < arr.length; i++) {
         var val = arr[i];
         if(val > pivot) {
             right.push(val);
@@ -14,9 +16,6 @@ function quickSort(arr) {
             left.push(val);
         }
     }
-
-    var newArr = [];
-    newArr = newArr.concat(left, [pivot], right);
-
-    return newArr;
+    
+    return Array.prototype.concat(quickSort(left), [pivot], quickSort(right));
 }
