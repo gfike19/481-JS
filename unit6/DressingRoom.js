@@ -1,4 +1,4 @@
-export default class DressingRoom {
+export class DressingRoom {
 
     constructor(numOfRooms = 3) {
         this.numOfRooms = numOfRooms;

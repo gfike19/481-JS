@@ -1,5 +1,5 @@
-export default class Customer {
-
+// export default class Customer {
+class Customer {
     constructor(numOfItems = null) {
         if (numOfItems == null) {
             this.numOfItems = Util.prototype.getRandomInt(20);
