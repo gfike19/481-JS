@@ -5,11 +5,11 @@ export class DressingRoom {
     }
 
     RequestRoom(cust) {
-        min = 60000;
+        var min = 60000;
         if (this.numOfRooms != 0) {
             this.numOfRooms--;
-            numOfItems = cust.numOfItems();
-            numOfMins = Util.prototype.getRandomInt(3);
+            var numOfItems = cust.numOfItems();
+            var numOfMins = Util.prototype.getRandomInt(3);
             this.sleep((numOfMins * min) * numOfItems);
             this.numOfRooms++;
         } else {
